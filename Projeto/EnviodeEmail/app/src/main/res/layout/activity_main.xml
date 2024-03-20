@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    >
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:id="@+id/txtTitulo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="App Envio Email"
+            android:textColor="#214829"
+            android:layout_gravity="center"
+            android:layout_margin="16dp"
+            android:textStyle="bold"
+            android:textSize="35dp"/>
+
+        <TextView
+            android:id="@+id/txtEmail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Email para: "
+            android:layout_marginTop="8dp"
+            android:textStyle="bold"
+            android:layout_marginStart="8dp"
+            android:textSize="16sp"/>
+
+        <EditText
+            android:id="@+id/editEmail"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:ems="10"
+            android:layout_margin="8dp"
+            android:inputType="text"
+            android:hint="Email:" />
+
+        <TextView
+            android:id="@+id/txtAssunto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Assunto: "
+            android:layout_marginTop="8dp"
+            android:textStyle="bold"
+            android:layout_marginStart="8dp"
+            android:textSize="16sp"/>
+
+        <EditText
+            android:id="@+id/editAssunto"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:ems="10"
+            android:layout_margin="8dp"
+            android:inputType="text"
+            android:hint="Assunto:" />
+
+        <TextView
+            android:id="@+id/txtMensagem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mensagem: "
+            android:textStyle="bold"
+            android:layout_marginTop="8dp"
+            android:layout_marginStart="8dp"
+            android:textSize="16sp"/>
+
+        <EditText
+            android:id="@+id/editMensagem"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:ems="10"
+            android:layout_margin="8dp"
+            android:inputType="text"
+            android:hint="Mensagem:" />
+
+        <Button
+            android:id="@+id/btnEnviar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="22dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:text="ENVIAR EMAIL"
+            android:textStyle="bold"
+            android:backgroundTint="#EA1849"
+            />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</androidx.core.widget.NestedScrollView>
