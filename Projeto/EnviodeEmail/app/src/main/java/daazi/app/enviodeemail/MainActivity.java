@@ -40,6 +40,16 @@ public class MainActivity extends AppCompatActivity {
 
                     processarFormulario();
 
+                    /*Intent*/
+                    intent = new Intent(Intent.ACTION_SEND);
+                    intent.putExtra(Intent.EXTRA_EMAIL, new String[]{emailDestinatario});/*Email da pessoa*/
+                    intent.putExtra(Intent.EXTRA_SUBJECT, assunto);/*assunto*/
+                    intent.putExtra(Intent.EXTRA_TEXT, mensagem);/*A Mensagem*/
+
+                    intent.setType("message/rfc822");
+
+                    startActivity(Intent.createChooser(intent,"Selecione um aplicativo"));
+
                 }else {
                     AppUtil.voErroEdit("* Campo NULO",editEmail,editAssunto,editMensagem);
                 }
@@ -64,5 +74,7 @@ public class MainActivity extends AppCompatActivity {
         assunto = editAssunto.getText().toString();
         mensagem = editMensagem.getText().toString();
     }
+
+
 
 }
